@@ -226,14 +226,14 @@ header {
     margin-right: 3.2rem;
 }
 
-.header-menu__link {
+.header-menu__link a {
     font-size: 1.6rem;
     line-height: 1.9rem;
     font-weight: 600;
     color: var(--dark-gray);
 }
 
-.header-social-icons {
+.header__social-icons {
     position: relative;
     z-index: 5;
 }
@@ -699,4 +699,37 @@ header {
     min-height: 84.5rem;
     position: relative;
     background: url(../img/thanks-bg.jpg) no-repeat center top / cover;
+}
+
+footer {
+    padding: 4rem 0 1.6rem;
+}
+
+.footer__row {
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+}
+
+.footer-menu__list {
+    display: flex;
+}
+
+.footer-menu__link:not(:last-child) {
+    margin-right: 4rem;
+}
+
+.footer-menu__link a {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    color: var(--gray);
+    display: inline-block;
+    border-bottom: 1px solid var(--gray);
+}
+
+.footer__copyright {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #b3b3b3;
+    text-align: center;
 }
