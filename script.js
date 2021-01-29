@@ -14,3 +14,4 @@ function btnClick() {
 
     content.classList.toggle("hidden");
 }
+
