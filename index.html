@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -25,6 +26,11 @@
                         <li class="header-menu__link"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
+                <div class="header-menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="header__socials socials">
                     <li class="socials__item socials__item--primary">
                         <a class="socials__link" href="https://vk.com/animalsgrodno" target="_blank">
@@ -99,20 +105,20 @@
     </header>
     <main class="main">
         <section class="intro">
+            <h2 class="visually-hidden">Пункт временного содержания животных</h2>
             <div class="intro__row row">
                 <div class="intro__column">
-                    <div class="intro-images">
-                        <img class="intro-images__img intro-images__img--large" src="img/intro-dog.png"
+                    <div class="intro__images stadium-images">
+                        <img class="stadium-images__img-large" src="img/intro-dog.png"
                             alt="Собака в вольере с решеткой">
-                        <img class="intro-images__img intro-images__img--small" src="img/intro-cat.png"
-                            alt="Кот в вольере с решеткой">
+                        <img class="stadium-images__img-small" src="img/intro-cat.png" alt="Кот в вольере с решеткой">
                     </div>
                 </div>
                 <div class="intro__column">
                     <div class="intro-content">
-                        <p class="intro-content__title">Тут большие добрые сердца помогают жить маленьким<br>сердечкам
+                        <p class="intro-content__title">Тут большие добрые сердца помогают жить маленьким сердечкам
                         </p>
-                        <p class="intro-content__text text-sm">Ежедневно в&nbsp;пункт временного содержания, путём
+                        <p class="intro-content__text phrase">Ежедневно в&nbsp;пункт временного содержания, путём
                             отлова,
                             попадают безнадзорные собаки и&nbsp;коты. По&nbsp;закону, у&nbsp;животных находящихся
                             в&nbsp;САХе есть всего
@@ -121,7 +127,7 @@
                             невостребованных животных ждёт УСЫПЛЕНИЕ! Здесь вы&nbsp;сможете найти своего как
                             потерявшегося, так и&nbsp;нового верного друга!
                         </p>
-                        <p class="intro-content__text text-sm">Если нет возможности забрать хвостика, вы&nbsp;можете
+                        <p class="intro-content__text phrase">Если нет возможности забрать хвостика, вы&nbsp;можете
                             помочь
                             нам
                             финансово или другой материальной помощью. Еще нам всегда нужны добрые и&nbsp;отзывчивые
@@ -159,12 +165,13 @@
             </div>
         </section>
         <section class="home bg-gray" id="home">
+            <h2 class="visually-hidden">Как взять питомца домой?</h2>
             <div class="section-line section-line--home"></div>
             <div class="container-narrow">
                 <ul class="home__row row">
                     <li class="home__column home-item">
                         <h3 class="home-item__title">Дом и любовь для хвостика</h3>
-                        <p class="home-item__description text-sm">Самая большая помощь&nbsp;&mdash; это спасти жизнь
+                        <p class="home-item__description phrase">Самая большая помощь&nbsp;&mdash; это спасти жизнь
                             животному,
                             забрать
                             домой, или помочь хвостику с&nbsp;поиском дома. У&nbsp;наших подопечных очень мало времени.
@@ -174,7 +181,7 @@
                     </li>
                     <li class="home__column home-item">
                         <h3 class="home-item__title">Передержка</h3>
-                        <p class="home-item__description text-sm">Когда животных ждет скорое усыпление, очень важно
+                        <p class="home-item__description phrase">Когда животных ждет скорое усыпление, очень важно
                             найти
                             ему дом. Но&nbsp;пока дом и&nbsp;новые или старые хозяева разыскиваются, хвостику нужно
                             где-то
@@ -203,8 +210,8 @@
                                     alt="Собака на поводке среди летнего лесного пейзажа"></a>
                             <h5 class="pet-card__title">Блэки</h5>
                             <p class="pet-card__subtitle">Мальчик, 7 месяцев</p>
-                            <p class="pet-card__description">Веселый и очень игривый, ему так нужны ваша любовь и
-                                ласка. У него потрясающая густая шерсть.</p>
+                            <p class="pet-card__description">Веселый и&nbsp;очень игривый, ему так нужны ваша любовь и
+                                ласка. У&nbsp;него потрясающая густая шерсть.</p>
                             <button class="pet-card__btn content-btn">Подробнее</button>
                         </article>
                     </div>
@@ -214,9 +221,9 @@
                                     alt="Милый щенок на руках женщины"></a>
                             <h5 class="pet-card__title">Моник</h5>
                             <p class="pet-card__subtitle">Мальчик, 7 месяцев</p>
-                            <p class="pet-card__description">К поводку приучен. Не агрессивный. В еде не
+                            <p class="pet-card__description">К&nbsp;поводку приучен. Не&nbsp;агрессивный. В&nbsp;еде не
                                 привередничает.
-                                С другими животными не конфликтует. Привит.</p>
+                                С&nbsp;другими животными не&nbsp;конфликтует. Привит.</p>
                             <button class="pet-card__btn content-btn">Подробнее</button>
                         </article>
                     </div>
@@ -271,9 +278,11 @@
         <section class="financy" id="financy">
             <div class="section-line section-line--financy"></div>
             <div class="container-narrow">
-                <h3 class="financy__title">Финансовая поддержка</h3>
-                <p class="financy__description">Такая помощь необходима для оплаты стерилизации, прививок, лечения
-                    больных животных, покупка корма и других жизненно необходимых вещей.</p>
+                <div class="financy__header">
+                    <h3 class="financy__title">Финансовая поддержка</h3>
+                    <p class="financy__description">Такая помощь необходима для оплаты стерилизации, прививок, лечения
+                        больных животных, покупка корма и других жизненно необходимых вещей.</p>
+                </div>
                 <div class="financy__row row">
                     <div class="financy__column financy-content">
                         <h4 class="financy-content__caption">Расчетный счет в Банке</h4>
@@ -290,14 +299,17 @@
                     </div>
                     <div class="financy__column financy-content">
                         <h4 class="financy-content__caption">Коробочки в городе</h4>
-                        <ol class="financy-content__list">Наши коробочки для пожертвований в г. Гродно:
-                            <li class="financy-content__item">Зоомаркет «Зообазар», ул. Комарова, 26а;</li>
+                        <ol class="financy-content__list">Наши коробочки для пожертвований в&nbsp;г. Гродно:
+                            <li class="financy-content__item">Зоомаркет &laquo;Зообазар&raquo;, ул. Комарова, 26а;</li>
                             <li class="financy-content__item">Учебный корпус ГГАУ, ул. Волковича, 1;</li>
-                            <li class="financy-content__item">Парикмахерская «ПРИМАДОННА», ул. Гоголя, 11;</li>
-                            <li class="financy-content__item">Зоомаркет «Зообазар» ул. Пушкина, 31а;</li>
-                            <li class="financy-content__item">Гипермаркет «Евроопт», ул. Тимирязева, 8;</li>
-                            <li class="financy-content__item">Гипермаркет «Евроопт», ул. Янки Купалы, 82А;</li>
-                            <li class="financy-content__item">Фитнес-центр «АДРЕНАЛИН», ул. Подольная, д.37.</li>
+                            <li class="financy-content__item">Парикмахерская &laquo;ПРИМАДОННА&raquo;, ул. Гоголя, 11;
+                            </li>
+                            <li class="financy-content__item">Зоомаркет &laquo;Зообазар&raquo; ул. Пушкина, 31а;</li>
+                            <li class="financy-content__item">Гипермаркет &laquo;Евроопт&raquo;, ул. Тимирязева, 8;</li>
+                            <li class="financy-content__item">Гипермаркет &laquo;Евроопт&raquo;, ул. Янки Купалы, 82А;
+                            </li>
+                            <li class="financy-content__item">Фитнес-центр &laquo;АДРЕНАЛИН&raquo;, ул. Подольная, д.37.
+                            </li>
                         </ol>
                         <a href="#" class="financy-content__link content-link">Посмотреть на карте</a>
                     </div>
@@ -305,18 +317,17 @@
             </div>
         </section>
         <section class="merch bg-gray" id="merch">
+            <h2 class="visually-hidden">Какие вещи нужны?</h2>
             <div class="section-line section-line--merch"></div>
             <div class="container-slim">
                 <div class="merch__body">
                     <div class="merch-content">
                         <h3 class="merch-content__title">Корма</h3>
-                        <p class="merch-content__text">Можно помочь с покупкой и доставкой еды для хвостатых:
-                        </p>
-                        <ul class="merch-content__list">
+                        <ul class="merch-content__list">Можно помочь с покупкой и доставкой еды для хвостатых:
                             <li class="merch-content__item">Быстроразваривающиеся <strong>крупы:</strong> дроблёная
                                 гречка,
                                 овсянка, сечка,
-                                овсяные/гречневые хлопья, не требующие варки;</li>
+                                овсяные/гречневые хлопья, не&nbsp;требующие варки;</li>
                             <li class="merch-content__item"><strong>Сухие и влажные корма</strong> для собак и котов
                                 (кроме
                                 Рекс и Petboom);
@@ -327,18 +338,17 @@
                     </div>
                     <div class="merch-content">
                         <h3 class="merch-content__title">Лекарства</h3>
-                        <p class="merch-content__text text-sm">Нам необходимы препараты: <strong>цефтриаксон</strong>
-                            (флакон по 0,5 г);
+                        <p class="merch-content__info phrase">Нам необходимы препараты: <strong>цефтриаксон</strong>
+                            (флакон по&nbsp;0,5&nbsp;г);
                             <strong>новокаин</strong> (раствор для инъекций); <strong>гискан; гамавит; катозал; антитокс
                                 фоспренил;
                                 энтеросгель</strong>
-                            (паста); <strong>препараты от глистов, блох, клещей, для заживления ран.</strong>
+                            (паста); <strong>препараты от&nbsp;глистов, блох, клещей, для заживления ран.</strong>
                         </p>
                     </div>
                     <div class="merch-content">
                         <h3 class="merch-content__title">Другие нужные вещи</h3>
-                        <p class="merch-content__text">Для содержания животных всегда необходимы:</p>
-                        <ul class="merch-content__list">
+                        <ul class="merch-content__list">Для содержания животных всегда необходимы:
                             <li class="merch-content__item">Ошейники, поводки, намордники;</li>
                             <li class="merch-content__item">Опилки и солома в любом количестве;
                             </li>
@@ -358,7 +368,7 @@
             <div class="container-slim">
                 <div class="transportation__body">
                     <h3 class="transroptation__title">Автопомощь</h3>
-                    <p class="transroptation__text text-sm">Важной помощью будет транспортировка. Необходимо отвозить
+                    <p class="transroptation__text phrase">Важной помощью будет транспортировка. Необходимо отвозить
                         животных в
                         ветеринарную клинику в&nbsp;сопровождении нашего волонтера или привозить еду. Если у&nbsp;вас
                         есть
@@ -374,15 +384,16 @@
             <div class="section-line section-line--volunteering"></div>
             <div class="volunteering__row row">
                 <div class="volunteering__column">
-                    <div class="volunteering-image">
-                        <img src="img/volunteering-dog.png" alt="Пес в вольере держит в зубах розовую игрушку">
+                    <div class="volunteering__image stadium-images">
+                        <img class="stadium-images__img-large" src="img/volunteering-dog.png"
+                            alt="Пес в вольере, рука человека держит в зубах собаки розовую игрушку">
                     </div>
                 </div>
                 <div class="volunteering__column">
                     <div class="volunteering-content">
                         <h3 class="volunteering-content__title">Волонтерство
                         </h3>
-                        <p class="volunteering-content__text text-sm">Катастрофически не&nbsp;хватает добрых людей,
+                        <p class="volunteering-content__text phrase">Катастрофически не&nbsp;хватает добрых людей,
                             которые
                             готовы поделиться своим временем и&nbsp;окружить заботой животных. Много опыта
                             не&nbsp;нужно, все
@@ -409,16 +420,16 @@
                         <article class="news__item news-content">
                             <img src="img/news-1.png" alt="Черная собака на цепи" class="news-content__img">
                             <div class="new-content__body">
-                                <p class="news-content__text text-sm">Срочно необходимо забрать собаку (мальчик) на
+                                <p class="news-content__text phrase">Срочно необходимо забрать собаку (мальчик) на
                                     передержку или насовсем. Послезавтра его ждет усыпление. С&nbsp;кормом
                                     и&nbsp;доставкой
                                     поможем. В
                                     данный момент
                                     находится в&nbsp;вольера САХа.</p>
-                                <p class="news-content__text text-sm">Контактный телефон
+                                <p class="news-content__text phrase">Контактный телефон
                                     <a href="tel:+3752958930557">+ 37529 58930557</a>
                                 </p>
-                                <p class="news-content__text text-sm">Спасите жизнь хвостику.</p>
+                                <p class="news-content__text phrase">Спасите жизнь хвостику.</p>
                                 </p>
                             </div>
                         </article>
@@ -427,9 +438,9 @@
                                 alt="Четыре черных щенка со светлыми пятнами лежат в углу кирпичных стен"
                                 class="news-content__img">
                             <div class="news-content__body">
-                                <p class="news-content__text text-sm">Найдены бездомные щенки по улице Горького
+                                <p class="news-content__text phrase">Найдены бездомные щенки по улице Горького
                                     д.56.</p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или
                                     пристроить малышей&nbsp;&mdash; будем вам очень благодарны.
@@ -443,9 +454,9 @@
                                 alt="Четыре черных щенка со светлыми пятнами лежат в углу кирпичных стен"
                                 class="news-content__img">
                             <div class="news-content__body">
-                                <p class="news-content__text text-sm">Найдены бездомные щенки по улице Горького
+                                <p class="news-content__text phrase">Найдены бездомные щенки по улице Горького
                                     д.56.</p>
-                                <p class="news-content__text text-sm">
+                                <p class="news-content__text phrase">
                                     Сегодня будут перевезены в вольеры САХа. Если у вас есть возможность взять на
                                     передержку
                                     или
@@ -458,23 +469,23 @@
                                 alt="Четыре черных щенка со светлыми пятнами лежат в углу кирпичных стен"
                                 class="news-content__img">
                             <div class="news-content__body">
-                                <p class="news-content__text text-sm">Найдены бездомные щенки по улице Горького
+                                <p class="news-content__text phrase">Найдены бездомные щенки по улице Горького
                                     д.56.</p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или пристроить малышей&nbsp;&mdash; будем вам очень благодарны. Найдены бедомные
                                     щенки
                                     по&nbsp;улице
                                     Горького д.56.
                                 </p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или пристроить малышей&nbsp;&mdash; будем вам очень благодарны. Найдены бедомные
                                     щенки
                                     по&nbsp;улице
                                     Горького д.56.
                                 </p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или пристроить малышей&nbsp;&mdash; будем вам очень благодарны.
                                 </p>
@@ -485,9 +496,9 @@
                                 alt="Четыре черных щенка со светлыми пятнами лежат в углу кирпичных стен"
                                 class="news-content__img">
                             <div class="news-content__body">
-                                <p class="news-content__text text-sm">Найдены бездомные щенки по улице Горького
+                                <p class="news-content__text phrase">Найдены бездомные щенки по улице Горького
                                     д.56.</p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или
                                     пристроить малышей&nbsp;&mdash; будем вам очень благодарны.
@@ -499,9 +510,9 @@
                                 alt="Четыре черных щенка со светлыми пятнами лежат в углу кирпичных стен"
                                 class="news-content__img">
                             <div class="news-content__body">
-                                <p class="news-content__text text-sm">Найдены бездомные щенки по улице Горького
+                                <p class="news-content__text phrase">Найдены бездомные щенки по улице Горького
                                     д.56.</p>
-                                <p class="news-content__text text-sm">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
+                                <p class="news-content__text phrase">Сегодня будут перевезены в&nbsp;вольеры САХа. Если
                                     у&nbsp;вас есть возможность взять на&nbsp;передержку
                                     или
                                     пристроить малышей&nbsp;&mdash; будем вам очень благодарны.
@@ -558,6 +569,7 @@
             </div>
         </section>
         <section class="thanks">
+            <h3 class="visually-hidden">Благодарность</h3>
             <div class="thanks__content">
                 <p>Спасибо<br>за помощь</p>
             </div>
@@ -565,26 +577,30 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="footer__row row">
-                <div class="footer__column footer__column--left">
-                    <ul class="footer-menu__list">
-                        <li class="footer-menu__link"><a href="#home">Дом или передержка</a></li>
-                        <li class="footer-menu__link"><a href="#financy">Финансовая поддержка</a></li>
-                        <li class="footer-menu__link"><a href="#merch">Корма, лекарства и другие вещи</a></li>
-                        <li class="footer-menu__link"><a href="#transportation">Автопомощь</a></li>
-                        <li class="footer-menu__link"><a href="#volunteering">Волонтерство</a></li>
-                    </ul>
+            <div class="footer-wrapper">
+                <div class="footer__row row">
+                    <div class="footer__column footer__column--left">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__link"><a href="#home">Дом или передержка</a></li>
+                            <li class="footer-menu__link"><a href="#financy">Финансовая поддержка</a></li>
+                            <li class="footer-menu__link"><a href="#merch">Корма, лекарства и другие вещи</a></li>
+                            <li class="footer-menu__link"><a href="#transportation">Автопомощь</a></li>
+                            <li class="footer-menu__link"><a href="#volunteering">Волонтерство</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column footer__column--right">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__link"><a href="#about-us">О нас</a></li>
+                            <li class="footer-menu__link"><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer__column footer__column--right">
-                    <ul class="footer-menu__list">
-                        <li class="footer-menu__link"><a href="#about-us">О нас</a></li>
-                        <li class="footer-menu__link"><a href="#contacts">Контакты</a></li>
-                    </ul>
-                </div>
+                <p class="footer__copyright">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
             </div>
-            <p class="footer__copyright">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
