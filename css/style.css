@@ -45,6 +45,7 @@
     --light-gray: #6b6b6b;
     --yellow: #fbc832;
     --dark-yellow: #c78100;
+    --dirty-yellow: #ad7f00;
     --main-mb: 24px;
     --main-font-size: 16px;
 }
@@ -189,6 +190,10 @@ button {
     cursor: pointer;
 }
 
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
 .btn {
     position: relative;
     display: inline-flex;
@@ -240,6 +245,26 @@ button {
     background: linear-gradient(180deg, #ffde89 0%, #ffcb38 100%);
 }
 
+button.btn--primary:disabled {
+    background: #ffe7a2;
+}
+
+button.btn--primary:disabled::after {
+    background: #fee39e;
+}
+
+button.btn--primary:disabled .btn {
+    color: var(--light-gray);
+}
+
+.btn:focus-visible {
+    outline: none;
+}
+
+.btn:focus-visible.btn::after {
+   box-shadow: 0 0 0 3px #6B6B6B;
+}
+
 .btn--secondary {
     background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f6 100%);
     box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
@@ -258,6 +283,18 @@ button {
 .btn--secondary:active {
     background: linear-gradient(180deg, #f1f1f1 1.56%, #fcfafa 100%);
     box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25), inset 0px 4px 13px rgba(0, 0, 0, 0.06);
+}
+
+button.btn--secondary:disabled {
+    background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f6 100%);
+}
+
+button.btn--secondary:disabled::after {
+    background: #f6f6f6;
+}
+
+button.btn--secondary:disabled .btn {
+    color: #b3b3b3;
 }
 
 .socials {
@@ -378,7 +415,7 @@ button {
     align-items: center;
     font-size: 2rem;
     line-height: 2.5rem;
-    color: #ad7f00;
+    color: var(--dirty-yellow);
     text-decoration: underline;
     text-underline-offset: 2.5px;
     font-weight: 500;
@@ -392,6 +429,10 @@ button {
 .content-link:active,
 .content-btn:active {
     color: #f6b400;
+}
+
+.content-btn:disabled {
+    color: #c3c3c3;
 }
 
 .content-link svg,
@@ -1044,7 +1085,6 @@ header .socials__item:not(:last-child) {
 }
 
 .news__btn:focus {
-    outline: none;
     color: #523c00;
 }
 
@@ -1119,6 +1159,7 @@ header .socials__item:not(:last-child) {
 .thanks {
     min-height: 74.1rem;
     position: relative;
+    background-color: #d6d6d6;
     background: url(../img/thanks-bg.jpg) no-repeat 0 0 / cover;
 }
 
@@ -1186,19 +1227,31 @@ footer {
 
 .footer-menu__link a {
     font-size: 1.4rem;
-    color: var(--gray);
     display: inline-block;
-    border-bottom: 1px solid var(--gray);
 }
 
 .footer__column--left .footer-menu__link a {
     font-weight: 600;
     line-height: 1.7rem;
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray);
 }
 
 .footer__column--right .footer-menu__link a {
     font-weight: 400;
     line-height: 1.6rem;
+    color: var(--dark-gray);
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.footer-menu__link a:hover {
+    color: var(--dirty-yellow);
+    border-bottom: 1px solid var(--dirty-yellow);
+}
+
+.footer-menu__link a:active {
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray);
 }
 
 .footer__copyright {

@@ -2,7 +2,15 @@ $(document).ready(function() {
     $(".header-menu__icon").click(function(event) {
         $(".header-menu__icon,.header-menu").toggleClass("active");
         $("body").toggleClass("lock");
+        $(".overlay").fadeToggle(500);
     });
+
+    $(".overlay").click(function(event) {
+        $(".header-menu__icon,.header-menu").toggleClass("active");
+        $(".overlay").fadeToggle(300);
+        
+    });
+
 });
 
 

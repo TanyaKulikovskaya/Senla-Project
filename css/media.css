@@ -337,6 +337,17 @@
         overflow: hidden;
     }
 
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 7;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+    }
+
     .container {
         max-width: 548px;
     }
@@ -418,6 +429,7 @@
 
     .header-menu.active {
         transform: translateY(0%);
+        overflow-y: hidden;
     }
 
     .header-menu__list {
@@ -776,6 +788,11 @@
 
     .socials__link svg {
         zoom: 0.6;
+    }
+
+    .section-line::before,
+    .section-line::after {
+        width: 40%;
     }
 
     header {
@@ -1185,6 +1202,11 @@
         max-width: 300px;
     }
 
+    .section-line::before,
+    .section-line::after {
+        width: 32%;
+    }
+
     .header-menu__list:first-child,
     .header-menu__list:last-child {
         padding-right: 67px;
@@ -1258,5 +1280,9 @@
 
     .thanks__content {
         top: 10.7rem;
+    }
+
+    .footer__copyright {
+       width: 100%;
     }
 }
