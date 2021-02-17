@@ -46,6 +46,10 @@
     --yellow: #fbc832;
     --dark-yellow: #c78100;
     --dirty-yellow: #ad7f00;
+    --sunglow: #eebf3a;
+    --success: #ffc41e;
+    --error: #cf2835;
+    --silver: #b3b3b3;
     --main-mb: 24px;
     --main-font-size: 16px;
     --animate-duration: 1.5s;
@@ -427,11 +431,13 @@ button.btn--secondary:disabled .btn {
 .content-link:hover,
 .content-btn:hover {
     color: #523c00;
+    transition: color 0.3s linear 0s;
 }
 
 .content-link:active,
 .content-btn:active {
     color: #f6b400;
+    transition: color 0.3s linear 0s;
 }
 
 .content-btn:disabled {
@@ -730,12 +736,14 @@ header .socials__item:not(:last-child) {
     border: none;
     background-color: #fbfbfb;
     box-shadow: 6px 6px 16px rgba(224, 224, 224, 0.6), -6px -6px 16px rgba(255, 255, 255, 0.77);
+    transition: all 0.3s linear 0s;
 }
 
 .help-item__link:active {
     background-color: linear-gradient(136.02deg, #fdfdfd 0%, #eaeaea 72.75%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: -6px -6px 16px rgba(224, 224, 224, 0.6), 6px 6px 16px rgba(255, 255, 255, 0.77);
+    transition: all 0.3s linear 0s;
 }
 
 .help-item__link:focus-visible {

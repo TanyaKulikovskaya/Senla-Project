@@ -1,104 +1,28 @@
-@font-face {
-    font-family: "Gilroy";
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Gilroy";
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-    src: url("../fonts/gilroy-medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Gilroy";
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    src: url("../fonts/gilroy-semibold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Gilroy";
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    src: url("../fonts/gilroy-bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Gilroy";
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-    src: url("../fonts/gilroy-light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-}
-
-:root {
-    --dark-gray: #242424;
-    --gray: #474747;
-    --light-gray: #6b6b6b;
-    --sunglow: #eebf3a;
-    --success: #ffc41e;
-    --error: #cf2835;
-    --silver: #b3b3b3;
-}
-
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-    overflow-x: hidden;
-    font-size: 16px;
-    font-family: "Gilroy", Arial, serif;
-}
-
-a,
-a:visited {
+.modal a,
+.modal a:visited {
     text-decoration: none;
     color: inherit;
 }
 
-ul li {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-button:focus:not(:focus-visible) {
-    outline: none;
-}
-
-.window,
 .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 79px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
     display: flex;
     flex-direction: column;
-    max-width: 525px;
-    height: 100%;
-    padding: 30px 40px;
-    margin: 50px auto;
+    padding: 30px 40px 25px 40px;
+    margin: 0 auto;
     background: #ffffff;
     box-shadow: 0px 0px 22px rgba(161, 161, 161, 0.25);
     border-radius: 5px;
@@ -106,17 +30,13 @@ button:focus:not(:focus-visible) {
     z-index: 10;
 }
 
-.window-header,
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     border-bottom: 1px solid var(--sunglow);
     padding-bottom: 16px;
     margin-bottom: 16px;
 }
 
-.window-header h2,
 .modal-header h2 {
     font-weight: 600;
     font-size: 28px;
@@ -135,26 +55,29 @@ button:focus:not(:focus-visible) {
     margin-bottom: 4px;
 }
 
-.window-header button,
-.modal-header button {
+.close-icon {
     background: url(../icons/close-icon.png);
+    background-position: center center;
     width: 24px;
     height: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-.intro {
+.banner {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.intro__img {
+.banner__img {
     flex: 0 0 95px;
     height: 95px;
     overflow: hidden;
 }
 
-.intro__img img {
+.banner__img img {
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -162,35 +85,31 @@ button:focus:not(:focus-visible) {
     object-position: center;
 }
 
-.intro__text {
+.banner__text {
     flex: 1 1 auto;
     margin-left: 10px;
 }
 
-.intro__text h3 {
+.banner__text h3 {
     font-weight: 500;
     font-size: 22px;
     line-height: 20px;
     color: var(--light-gray);
 }
 
-.intro__text p {
+.banner__text p {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     color: var(--light-gray);
 }
 
-.window-body,
 .modal-body {
     margin-bottom: 32px;
 }
 
 .modal-body__desc {
     max-width: 90%;
-}
-
-.modal-body__desc p {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -198,7 +117,7 @@ button:focus:not(:focus-visible) {
 }
 
 .modal-form__fieldsets {
-    margin-bottom: 32px;
+    margin-bottom: 27px;
 }
 
 fieldset {
@@ -386,7 +305,8 @@ input[type="checkbox"] {
     box-shadow: 3px 3px 4px rgba(113, 113, 113, 0.05), inset 3px 3px 2px rgba(189, 188, 188, 0.24);
 }
 
-input[type="checkbox"]:checked ~ .checkbox-custom {
+input[type="checkbox"]:checked ~ .checkbox-custom,
+input[type="checkbox"]:focus-visible ~ .checkbox-custom {
     background: linear-gradient(168.69deg, #ffd96f -1.56%, #ffc82b 52.74%, #f4b500 93.23%);
     box-shadow: 2px 2px 4px rgba(206, 206, 206, 0.25);
     transform: rotate(0deg) scale(1);
@@ -394,7 +314,8 @@ input[type="checkbox"]:checked ~ .checkbox-custom {
     border: none;
 }
 
-input[type="checkbox"]:checked ~ .checkbox-custom::after {
+input[type="checkbox"]:checked ~ .checkbox-custom::after,
+input[type="checkbox"]:focus-visible ~ .checkbox-custom::after {
     position: absolute;
     content: "";
     transform: rotate(45deg);
@@ -431,7 +352,8 @@ input[type="radio"] + label {
     max-width: 90%;
 }
 
-input[type="radio"]:checked ~ label {
+input[type="radio"]:checked ~ label,
+input[type="radio"]:focus-visible ~ label {
     color: var(--dark-gray);
     font-weight: 500;
 }
@@ -448,7 +370,8 @@ input[type="radio"] + label:before {
     background-color: #ffffff;
 }
 
-input[type="radio"]:checked + label:before {
+input[type="radio"]:checked + label:before,
+input[type="radio"]:focus-visible + label:before {
     background: linear-gradient(149.04deg, #f9b800 22.92%, #ffd45b 81.94%);
     box-shadow: 2px 2px 4px rgba(201, 201, 201, 0.25), inset 3px 3px 4px #ecaf01;
 }
@@ -457,13 +380,15 @@ input[type="radio"] + label:before {
     border-radius: 100%;
 }
 
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked + label:after,
+input[type="radio"]:focus-visible + label:after {
     content: "";
     position: absolute;
     transition: all 0.3s ease;
 }
 
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked + label:after,
+input[type="radio"]:focus-visible + label:after {
     left: 5px;
     top: 9px;
     width: 8px;
@@ -472,17 +397,21 @@ input[type="radio"]:checked + label:after {
     background-color: #ffffff;
 }
 
-input[type="radio"]:not(:checked) + label:after {
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:not(:focus-visible) + label:after {
     opacity: 0;
 }
 
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked + label:after,
+input[type="radio"]:focus-visible + label:after {
     opacity: 1;
 }
 
 .modal-form__buttons {
     display: flex;
     justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .modal-form__btn {
@@ -585,34 +514,33 @@ input[type="radio"]:checked + label:after {
     color: #b3b3b3;
 }
 
-.window {
-    height: 363px;
-}
-
-.window-body,
-.window-footer {
+.modal-body__text,
+.modal-footer {
     font-weight: 400;
     color: var(--dark-gray);
     font-size: 16px;
     line-height: 22px;
 }
 
-.window-body p:not(:last-child) {
-    margin-bottom: 8px;
-}
-
-.window-footer__link {
+.modal-footer__link {
     font-weight: 700;
     display: inline-block;
     padding: 5px 0;
 }
 
+#goods {
+    min-height: 363px;
+    max-width: 525px;
+}
+
 #take-home {
-    height: 735px;
+    min-height: 735px;
+    max-width: 525px;
 }
 
 #pet-boarding {
-    height: 834px;
+    min-height: 834px;
+    max-width: 525px;
 }
 
 #take-home fieldset,
@@ -621,36 +549,22 @@ input[type="radio"]:checked + label:after {
 }
 
 #transport {
-    height: 744px;
+    min-height: 744px;
+    max-width: 525px;
 }
 
 #volunteer {
-    height: 634px;
+    min-height: 634px;
+    max-width: 582px;
 }
 
 @media screen and (max-width: 639px) {
-    .window {
-        max-width: 360px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+    .modal-content {
+        padding: 30px 30px 25px 30px;
     }
 
-    .window-header h2 {
-        font-size: 22px;
-        line-height: 24px;
-    }
-
-    .window {
-        height: 382px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .modal {
-        max-width: 639px;
-    }
-
-    .modal-wrapper {
+    .modal-wrapper,
+    .modal-header h2 {
         max-width: 300px;
         margin: 0 auto;
     }
@@ -658,8 +572,8 @@ input[type="radio"]:checked + label:after {
     .modal-header h2 {
         font-size: 22px;
         line-height: 24px;
-        padding-left: 22%;
     }
+
     .modal-body__desc {
         max-width: 100%;
     }
@@ -684,40 +598,48 @@ input[type="radio"]:checked + label:after {
         margin-bottom: 20px;
     }
 
+    #goods {
+        min-height: 382px;
+        max-width: 360px;
+    }
+
     #take-home {
-        height: 780px;
+        min-height: 780px;
+        max-width: 100%;
     }
 
     #pet-boarding {
-        height: 910px;
+        min-height: 910px;
+        max-width: 100%;
     }
 
     #transport {
-        height: 879px;
+        min-height: 879px;
+        max-width: 100%;
     }
 
     #volunteer {
-        height: 712px;
+        min-height: 712px;
+        max-width: 100%;
     }
 
     input[type="radio"]:checked + label,
     input[type="radio"]:not(:checked) + label {
         max-width: 100%;
     }
-}
 
-@media screen and (max-width: 360px) {
-    .modal {
-        max-width: 360px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .modal-header h2 {
-        padding-left: 0;
+    .modal-form__btn::after {
+        top: -4px;
+        bottom: -4px;
     }
 
     .modal-form__btn:not(:last-child) {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    #goods {
+        max-width: 100%;
     }
 }
