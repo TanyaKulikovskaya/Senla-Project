@@ -37,7 +37,7 @@ const content = document.querySelector(".hidden");
 btnOpen.addEventListener("click", btnOpenClick);
 
 function btnOpenClick() {
-    
+
     if (content.classList.contains("hidden")) {
         btnOpen.textContent = "Скрыть все новости";
     } else {
@@ -59,9 +59,11 @@ for (let i = 0; i < modalShow.length; i++) {
 	modalShow[i].onclick = function() {
     let id = this.getAttribute('data-modal');
     let modal = document.getElementById(id);
+
     modal.style.display = 'block';
   }
 }
+
 
 for (let i = 0; i < modalClose.length; i++) {
   modalClose[i].onclick = function() {
@@ -71,12 +73,14 @@ for (let i = 0; i < modalClose.length; i++) {
   }
 }
 
+
 for (let i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       let id = this.getAttribute('data-modal');
 
       
       let modal = document.getElementById(id);
+
       modal.style.display = 'none';
     }
   }
