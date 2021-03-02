@@ -391,7 +391,8 @@
     }
 
     .socials__link svg {
-        zoom: 0.65;
+        width: 20px;
+        height: 20px;
     }
 
     header {
@@ -789,10 +790,6 @@
         display: block;
         margin: 0 auto;
         text-align: center;
-    }
-
-    .socials__link svg {
-        zoom: 0.6;
     }
 
     .section-line::before,
@@ -1288,6 +1285,6 @@
     }
 
     .footer__copyright {
-       width: 100%;
+        width: 100%;
     }
 }
