@@ -51,7 +51,6 @@
     --error: #cf2835;
     --silver: #b3b3b3;
     --main-mb: 24px;
-    --main-font-size: 16px;
     --animate-duration: 1.5s;
     --animate-delay: 1s;
 }
@@ -301,7 +300,7 @@ button.btn--secondary:disabled::after {
 }
 
 button.btn--secondary:disabled .btn {
-    color: #b3b3b3;
+    color: var(--silver);
 }
 
 .socials {
@@ -338,7 +337,8 @@ button.btn--secondary:disabled .btn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
 
 .socials__item--primary .socials__link svg {
@@ -424,7 +424,7 @@ button.btn--secondary:disabled .btn {
     line-height: 2.5rem;
     color: var(--dirty-yellow);
     text-decoration: underline;
-    text-underline-offset: 2.5px;
+    text-underline-offset: 3px;
     font-weight: 500;
 }
 
@@ -1002,7 +1002,7 @@ header .socials__item:not(:last-child) {
 }
 
 .merch__link {
-    margin-left: 8.5%;
+    padding-left: 8.5%;
 }
 
 .section-line--transportation {
@@ -1296,6 +1296,6 @@ footer {
 .footer__copyright {
     font-size: 1.2rem;
     line-height: 1.7rem;
-    color: #b3b3b3;
+    color: var(--silver);
     text-align: center;
 }

@@ -37,7 +37,6 @@ const content = document.querySelector(".hidden");
 btnOpen.addEventListener("click", btnOpenClick);
 
 function btnOpenClick() {
-    console.log(content.classList);
 
     if (content.classList.contains("hidden")) {
         btnOpen.textContent = "Скрыть все новости";
@@ -49,42 +48,46 @@ function btnOpenClick() {
 }
 
 
-var modal = document.getElementById('modal-take-home');
-var modalShow = document.getElementsByClassName("show")
-var modalClose = document.getElementsByClassName("modal-form__btn--secondary");
-var close = document.getElementsByClassName("close-icon");
+let modal = document.getElementById('modal-take-home');
+let modalShow = document.getElementsByClassName("show")
+let modalClose = document.getElementsByClassName("modal-form__btn--secondary");
+let close = document.getElementsByClassName("close-icon");
 
 
 
-for (var i = 0; i < modalShow.length; i++) {
+for (let i = 0; i < modalShow.length; i++) {
 	modalShow[i].onclick = function() {
-    var id = this.getAttribute('data-modal');
-    var modal = document.getElementById(id);
+    let id = this.getAttribute('data-modal');
+    let modal = document.getElementById(id);
+
     modal.style.display = 'block';
   }
 }
 
-for (var i = 0; i < modalClose.length; i++) {
+
+for (let i = 0; i < modalClose.length; i++) {
   modalClose[i].onclick = function() {
-    var id = this.getAttribute('data-modal');
-    var modal = document.getElementById(id);
+    let id = this.getAttribute('data-modal');
+    let modal = document.getElementById(id);
     modal.style.display = "none";
   }
 }
 
-for (var i = 0; i < close.length; i++) {
+
+for (let i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      var id = this.getAttribute('data-modal');
+      let id = this.getAttribute('data-modal');
 
       
-      var modal = document.getElementById(id);
+      let modal = document.getElementById(id);
+
       modal.style.display = 'none';
     }
   }
 
 
 window.onclick = function(event) {
-  var isModal = (' ' + event.target.className + ' ').indexOf(' modal ') > -1;
+  let isModal = (' ' + event.target.className + ' ').indexOf(' modal ') > -1;
   if (isModal) {
     event.target.style.display = "none";
   }
